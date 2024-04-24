@@ -7,6 +7,17 @@
             }
         </script>
         <style>
+            body{
+                margin:0 0 0 0;
+                padding:0 0 0 0;
+            }
+
+            .game-sect{
+                background-color:rgb(234, 248, 250);
+                padding:20;
+
+            }
+
             .select{
                 height:50px;
                 width:250px;
@@ -33,20 +44,31 @@
             }
             .gametab{
                 border-radius:20px;
-                aspect-ratio:1240/1000;
+                aspect-ratio:1366/568;
                 width:100%;
-                max-height:1000;
 
             }
             
+        </style>
+
+        <style>
+            .info{
+                background-color:rgb(252, 127, 127);
+                padding:20;
+            }
+            .text-info{
+                font-size:20;
+                font-family:sans-serif;
+            }
+
         </style>
     </head>
 
     <body>
         <h1>Welcome to the 6GT Page of 2324.</h1>
-
+        
         <div class="game-sect">
-
+            <h2>Games</h2>
         <label for="games" class="select-label"></label>
         <select name="games" id="selection" class="select">
             <option value="about:blank">Choose your game...</option>
@@ -69,13 +91,26 @@
             <option value="https://ext.minijuegosgratis.com/super-fowlst/game.html?key=y8&value=default">Superb Songbird</option>
             <option value="https://html5.gamemonetize.co/v7e9q66ihbsgvxcdlued873bdmv29nr4/">Superb Songbird 2</option>
             <option value="https://neal.fun/password-game/">The Login Activity</option>
-
+            <option value="https://territorial.io/">Provincial.io</option>
 
         </select>
         <button onclick="update()" class="submit">Open Game</button>
         <br>
-
         <iframe src="about:blank" id="gameTab" class="gametab"></iframe>
+        </div>
+
+        <div class="info">
+            <h2>What is this?</h2>
+            <p class="text-info"> 
+                This is the 6GT class page of 23-24, of games, websites, trinkets, and more.
+            </p>
+            <p class="text-info">
+                Best Math Teacher:
+            </p>
+            <img src="https://media.licdn.com/dms/image/sync/D4E27AQHmS6Ss4Zy8mg/articleshare-shrink_800/0/1711994004029?e=2147483647&v=beta&t=W6RN1Pwn6OGMu829VLw46L8Jd6ErIKdJxQ6MutN2fqg">
+            <br>
+            <img src="https://dcassetcdn.com/design_img/138412/98654/98654_1846040_138412_image.png" style="width:350;height:250;">
+
         </div>
 
     </body>
