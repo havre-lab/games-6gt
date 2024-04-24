@@ -8,13 +8,37 @@
         </script>
         <style>
             .select{
-                size:1000px;
+                height:50px;
+                width:250px;
+                font-family:Cursive;
+                font-size:20;
+                border:none;
+                background-color:turquoise;
+                border-radius:20px;
+                cursor:pointer;
+            }
+            
+            .submit{
+                height:50px;
+                width:150px;
+                font-family:Cursive;
+                font-size:20;
+                border:none;
+                background-color:turquoise;
+                border-radius:20px;
+                cursor:pointer;
+            }
+            .submit:hover{
+                background-color:rgb(106, 224, 213);
+            }
+            .gametab{
+                border-radius:20px;
             }
         </style>
     </head>
 
     <body>
-        <label for="games"></label>
+        <label for="games" class="select-label"></label>
         <select name="games" id="selection" class="select">
             <option value="about:blank">Choose your game...</option>
             <option value="https://drivemad.me//iframe/index.html">Steer Angry</option>
@@ -35,12 +59,13 @@
             <option value="https://flappybird.io/">Fluttering Fowl</option>
             <option value="https://ext.minijuegosgratis.com/super-fowlst/game.html?key=y8&value=default">Superb Songbird</option>
             <option value="https://html5.gamemonetize.co/v7e9q66ihbsgvxcdlued873bdmv29nr4/">Superb Songbird 2</option>
-            
+            <option value="https://neal.fun/password-game/">The Login Activity</option>
+
 
         </select>
-        <button onclick="update()">Open Game</button>
+        <button onclick="update()" class="submit">Open Game</button>
         <br>
 
-        <iframe src="about:blank" width="1240" height="1000" id="gameTab"></iframe>
+        <iframe src="about:blank" width="1240" height="1000" id="gameTab" class="gametab"></iframe>
     </body>
 </html>
