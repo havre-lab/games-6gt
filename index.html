@@ -33,11 +33,20 @@
             }
             .gametab{
                 border-radius:20px;
+                aspect-ratio:1240/1000;
+                width:100%;
+                max-height:1000;
+
             }
+            
         </style>
     </head>
 
     <body>
+        <h1>Welcome to the 6GT Page of 2324.</h1>
+
+        <div class="game-sect">
+
         <label for="games" class="select-label"></label>
         <select name="games" id="selection" class="select">
             <option value="about:blank">Choose your game...</option>
@@ -66,6 +75,8 @@
         <button onclick="update()" class="submit">Open Game</button>
         <br>
 
-        <iframe src="about:blank" width="1240" height="1000" id="gameTab" class="gametab"></iframe>
+        <iframe src="about:blank" id="gameTab" class="gametab"></iframe>
+        </div>
+
     </body>
 </html>
