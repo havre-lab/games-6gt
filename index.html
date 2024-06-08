@@ -8,6 +8,39 @@
 
             
         </script>
+        <script>
+            function closeBlock(){
+                document.getElementById("blocker").style.display="none";
+            }
+        </script>
+        <style>
+            .blocker{
+                position:fixed;
+                left:30%;
+                top: 30%;
+                width:40%;
+                height:40%;
+
+                background-color:rgb(219, 196, 196);
+                
+            }
+
+            .entrance{
+                position:relative;
+                left:30%;
+                width:40%;
+                height:30%;
+                border-radius:50px;
+                border:none;
+                background-color:rgb(7, 212, 7);
+                font-size:larger;
+                cursor:pointer;
+            }
+            .entrance:hover{
+                background-color:rgb(106, 255, 106)
+            }
+
+        </style>
         <style>
             body{
                 margin:0 0 0 0;
@@ -78,8 +111,13 @@
     </head>
 
     <body>
-        <h1>Welcome to the 6GT Page of 23-24.</h1>
         
+
+
+
+        <h1>Welcome to the 6GT Page of 23-24.</h1>
+        <h2>A tiny webpage on a huge internet.</h2>
+        <h3>Made by Hutton Zhou, past 6GT student and path of the graduating class of 2030.</h3>
         <div class="game-sect">
             <h2>Games</h2>
         <label for="games" class="select-label"></label>
@@ -137,5 +175,14 @@
         </div>
         
 
+
+        <!--The page blocker-->
+        <div class="blocker" id="blocker">
+            <h1 style="text-align:center;">Hello, 6GT student.</p>
+            <h2 style="text-align:center;">Welcome to the 6GT class website.</h2>
+            <div style="width:100%;">
+            <button class="entrance" onclick="closeBlock()">Continue</button>
+            </div>
+        </div>
     </body>
 </html>
