@@ -10,7 +10,13 @@
         </script>
         <script>
             function closeBlock(){
-                document.getElementById("blocker").style.display="none";
+                if (document.getElementById("password-entrance").value=="manchester-united"){
+                    document.getElementById("blocker").style.display="none";
+                }
+                else{
+                    alert("Wrong password.");
+                }
+                
             }
         </script>
         <style>
@@ -24,7 +30,15 @@
                 background-color:rgb(219, 196, 196);
                 
             }
-
+            #password-entrance{
+                position:relative;
+                left: 25%;
+                width:50%;
+                height:15%;
+                border-color:red;
+                border-radius:10px;
+                margin-bottom:30px;
+            }
             .entrance{
                 position:relative;
                 left:30%;
@@ -195,8 +209,11 @@
         <!--The page blocker-->
         <div class="blocker" id="blocker">
             <h1 style="text-align:center;">Hello, 6GT student.</p>
-            <h2 style="text-align:center;">Welcome to the 6GT class website.</h2>
+            <h2 style="text-align:center;">Welcome to the 6GT class website. Please ask Mr GT for the password.</h2>
+            
             <div style="width:100%;">
+            <input type="password" id="password-entrance">
+            <br>
             <button class="entrance" onclick="closeBlock()">Continue</button>
             </div>
         </div>
