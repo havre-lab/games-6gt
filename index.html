@@ -24,13 +24,17 @@
             .blocker{
                 position:fixed;
                 left:30%;
-                top: 30%;
+                top:30%;
                 width:40%;
                 height:40%;
 
                 background-color:rgb(219, 196, 196);
                 
             }
+            .text-entrance{
+                font-family:cursive;
+            }
+
             #password-entrance{
                 position:relative;
                 left: 25%;
@@ -38,8 +42,13 @@
                 height:15%;
                 border-color:red;
                 border-radius:10px;
-                margin-bottom:30px;
+                margin-bottom:10px;
+                background-color:white;
             }
+            #password-entrance:focus{
+                background-color:grey;
+            }
+
             .entrance{
                 position:relative;
                 left:30%;
@@ -93,6 +102,7 @@
                 background-color:rgb(106, 224, 213);
             }
             .gametab{
+                margin-top:20px;
                 border-radius:20px;
                 aspect-ratio:1366/568;
                 width:100%;
@@ -102,6 +112,22 @@
         </style>
 
         <style>
+            .flex-info{
+                display:flex;
+                flex-wrap:wrap;
+            }
+
+            .flex-info-item{
+                background-color:red;
+                padding:20px;
+                margin-right:20px;
+                margin-bottom:20px;
+            }
+
+            .flex-info-item:hover{
+                background-color:rgb(255, 161, 161);
+            }
+
             .info{
                 background-color:rgb(252, 127, 127);
                 padding:20;
@@ -109,6 +135,12 @@
             .text-info{
                 font-size:20;
                 font-family:sans-serif;
+            }
+
+            .img-info{
+                width:300px;
+                height:300px;
+                
             }
 
         </style>
@@ -187,17 +219,25 @@
             <p class="text-info"> 
                 This is the 6GT class page of 23-24, of games, websites, trinkets, and more.
             </p>
-            <p class="text-info">
-                Best Math Teacher:
-            </p>
-            <img src="https://media.licdn.com/dms/image/sync/D4E27AQHmS6Ss4Zy8mg/articleshare-shrink_800/0/1711994004029?e=2147483647&v=beta&t=W6RN1Pwn6OGMu829VLw46L8Jd6ErIKdJxQ6MutN2fqg" id="gtImg">
-            <br>
-            <p class="text-info">Best Football Team:</p>
-            <img src="https://dcassetcdn.com/design_img/138412/98654/98654_1846040_138412_image.png">
-            <br>
-            <p class="text-info">Buy this book:</p>
-            <a href="https://www.amazon.ca/Eggxtraordinary-Justin-Gadd-Thomson/dp/B0CTV242RQ?source=ps-sl-shoppingads-lpcontext&ref_=fplfs&psc=1&smid=A3DWYIK6Y9EEQB"><img src="https://m.media-amazon.com/images/I/61RXgtXO95L._SL1000_.jpg" width="600" height="600"></a>
-        </div>
+            <div class="flex-info">
+                <div class="flex-info-item">
+                    <p class="text-info">Best Math Teacher:</p>
+                    <img class="img-info" src="https://media.licdn.com/dms/image/sync/D4E27AQHmS6Ss4Zy8mg/articleshare-shrink_800/0/1711994004029?e=2147483647&v=beta&t=W6RN1Pwn6OGMu829VLw46L8Jd6ErIKdJxQ6MutN2fqg">
+                </div>
+                <div class="flex-info-item">
+                    <p class="text-info">Best Football Team:</p>
+                    <img class="img-info" src="https://upload.wikimedia.org/wikipedia/en/thumb/7/7a/Manchester_United_FC_crest.svg/1200px-Manchester_United_FC_crest.svg.png">
+                </div>
+                <div class="flex-info-item">
+                    <p class="text-info">Buy this book:</p>
+                    <a href="https://www.amazon.ca/Eggxtraordinary-Justin-Gadd-Thomson/dp/B0CTV242RQ?source=ps-sl-shoppingads-lpcontext&ref_=fplfs&psc=1&smid=A3DWYIK6Y9EEQB"><img class="img-info" src="https://m.media-amazon.com/images/I/61RXgtXO95L._SL1000_.jpg" width="600" height="600"></a>
+                </div>
+            </div>
+
+            
+      
+            
+            </div>
 
         <div class="quotes">
             <h2>Very good quotes</h2>
@@ -430,8 +470,8 @@
 
         <!--The page blocker-->
         <div class="blocker" id="blocker">
-            <h1 style="text-align:center;">Hello, 6GT student.</p>
-            <h2 style="text-align:center;">Welcome to the 6GT class website. Please ask Mr GT for the password.</h2>
+            <h1 class="text-entrance" style="text-align:center;">Hello, 6GT student.</p>
+            <h2 class="text-entrance" style="text-align:center;">Welcome to the 6GT class website. Please ask Mr GT for the password.</h2>
             
             <div style="width:100%;">
             <input type="password" id="password-entrance">
