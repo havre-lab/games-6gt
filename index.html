@@ -108,6 +108,7 @@
                 border-radius:20px;
                 aspect-ratio:1366/568;
                 width:100%;
+                box-shadow:0 0 30px 10px grey;
 
             }
             
@@ -122,12 +123,17 @@
             .flex-info-item{
                 background-color:red;
                 padding:20px;
-                margin-right:20px;
+                margin-right:50px;
                 margin-bottom:20px;
+                box-shadow:0 0 10px 10px red;
+                transition-property:background-color box-shadow;
+                transition-duration:300ms;
             }
 
             .flex-info-item:hover{
                 background-color:rgb(255, 161, 161);
+                box-shadow:0 0 10px 10px rgb(255,161,161);
+
             }
 
             .info{
@@ -142,7 +148,6 @@
             .img-info{
                 width:300px;
                 height:300px;
-                
             }
 
         </style>
@@ -205,6 +210,7 @@
             <optgroup label="Funny Stuff">
                 <option value="https://spinningrat.online/">Rotating Rodent</option>
                 <option value="https://puginarug.com/">Not-a-cat in a Doormat</option>
+                <option value="https://havre-lab.github.io/games-6gt/">This</option>
             </optgroup>
             <optgroup label="Game Collections">
                 <option value="https://play.fancade.com/">Supporter Cade</option>
@@ -234,6 +240,7 @@
                     <p class="text-info">Buy this book:</p>
                     <a href="https://www.amazon.ca/Eggxtraordinary-Justin-Gadd-Thomson/dp/B0CTV242RQ?source=ps-sl-shoppingads-lpcontext&ref_=fplfs&psc=1&smid=A3DWYIK6Y9EEQB"><img class="img-info" src="https://m.media-amazon.com/images/I/61RXgtXO95L._SL1000_.jpg" width="600" height="600"></a>
                 </div>
+                
             </div>
 
             
