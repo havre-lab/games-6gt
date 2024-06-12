@@ -13,7 +13,34 @@
                 document.getElementById("gameTab").src=document.getElementById("selection").value;
             }
 
-            
+        
+        </script>
+        <script>
+            function customizeColor(){
+                document.getElementById("customize").style.backgroundColor=document.getElementById("customize-color").value;
+            }
+
+        </script>
+        <script>
+            function customizeTextColor(){
+                let nodeList=document.querySelectorAll("#customize *");
+                for (let i=0; i<nodeList.length; i++){
+                    nodeList[i].style.color=document.getElementById("customize-text-color").value;
+                }
+
+            }
+            function customizeFontSize(){
+                let nodeList=document.querySelectorAll("#customize *");
+                for (let i=0; i<nodeList.length; i++){
+                    nodeList[i].style.fontSize=document.getElementById("customize-font-size").value;
+                }
+            }
+            function customizeFont(){
+                let nodeList=document.querySelectorAll("#customize *");
+                for (let i=0; i<nodeList.length; i++){
+                    nodeList[i].style.fontFamily=document.getElementById("customize-font").value;
+                }
+            }
         </script>
         <script>
             function closeBlock(){
@@ -77,6 +104,17 @@
             body{
                 margin:0 0 0 0;
                 padding:0 0 0 0;
+            }
+            .contents{
+                background-color:lightgrey;
+                width:100px;
+                border-width:2px;
+                border-color:black;
+                border-radius:5px;
+                border-style:solid;
+                padding:7px;
+                margin:20px;
+
             }
 
             .game-sect{
@@ -166,21 +204,38 @@
             }
 
         </style>
-
+        <style>
+            .customize{
+                background-color:aliceblue;
+                padding:20;
+            }
+        </style>
+        
         <meta name="google-site-verification" content="npb9DfBRf3uEku_YUZNDgnF8vBUsjd0IKlJ62kR25ik" />
   
     </head>
 
     <body>
         
-
+        
 
 
         <h1>Welcome to the 6GT Page of 23-24.</h1>
         <h2>A tiny webpage on a huge internet.</h2>
         <h3>Made by Hutton Zhou, past 6GT student and path of the graduating class of 2030.</h3>
+        <div class="contents">
+            <h4>Table of Contents</h2>
+            <a href="#games-link">Games</a>
+            <br>
+            <a href="#info-link">Info</a>
+            <br>
+            <a href="#quotes-link">Quotes</a>
+            <br>
+            <a href="#customize">Customize (Experimental)</a>
+            <br>
+        </div>
         <div class="game-sect">
-            <h2>Games</h2>
+            <h2 id="games-link">Games</h2>
         <label for="games" class="select-label"></label>
         <select name="games" id="selection" class="select">
             <option value="about:blank">Choose your game...</option>
@@ -232,7 +287,7 @@
         </div>
 
         <div class="info">
-            <h2>What is this?</h2>
+            <h2 id="info-link">What is this?</h2>
             <p class="text-info"> 
                 This is the 6GT class page of 23-24, of games, websites, trinkets, and more.
             </p>
@@ -258,7 +313,7 @@
             </div>
 
         <div class="quotes">
-            <h2>Very good quotes</h2>
+            <h2 id="quotes-link">Very good quotes</h2>
             <p class="text-info">"When life gives you lemons, build a thermonuclear bomb."-Aaron Kanagaratnaraja</p>
             <details>
                 <summary>Pi</summary>
@@ -486,6 +541,29 @@
             <p class="text-info">"Only the fool would take trouble to verify that his sentence was composed of ten a's, three b's, four c's, four d's, forty-six e's, sixteen f's, four g's, thirteen h's, fifteen i's, two k's, nine l's, four m's, twenty-five n's, twenty-four o's, five p's, sixteen r's, forty-one s's, thirty-seven t's, ten u's, eight v's, eight w's, four x's, eleven y's, twenty-seven commas, twenty-three apostrophes, seven hyphens and, last but not least, a single !" -Lee Sallows</p>
             
         </div>
+
+        <div class="customize" id="customize">
+            <h2>Customize</h2>
+            <p>This area is experimental, use the inputs to customize this section!</p>
+            <input type="color" id="customize-color" class="submit">
+            <button onclick="customizeColor();" class="submit">Select background color</button>
+            <br>
+            <input type="color" id="customize-text-color" class="submit">
+            <button onclick="customizeTextColor();" class="submit">Select text color</button>
+            <br>
+            <input type="range" min="10" max="50" value="25" id="customize-font-size">
+            <button class="submit" onclick="customizeFontSize();">Select font size</button>
+            <br>
+            <label for="customize-font"></label>
+            <select name="customize-font" id="customize-font" class="submit">
+                <option value="serif">Serif</option>
+                <option value="sans-serif">Sans-Serif</option>
+                <option value="monospace">Monospace</option>
+                <option value="cursive">Cursive</option>
+                <option value="fantasy">Fantasy</option>
+            </select>
+            <button class="submit" onclick="customizeFont();">Select font style</button>
+        </div>
         
 
 
@@ -498,7 +576,10 @@
             <input type="password" id="password-entrance">
             <br>
             <button class="entrance" onclick="closeBlock()">Continue</button>
+            <br>
+            
             </div>
         </div>
+       
     </body>
 </html>
