@@ -3,6 +3,12 @@
         
         <title>6GT Page of Page</title>
         <script>
+            function openTab(){
+                let mySignIn = window.open(document.getElementById("selection").value,"popupTest",`width=500,height=500,left=600,top=300`);
+                
+            }
+        </script>
+        <script>
             function update(){
                 document.getElementById("gameTab").src=document.getElementById("selection").value;
             }
@@ -92,7 +98,6 @@
             
             .submit{
                 height:50px;
-                width:150px;
                 font-family:Cursive;
                 font-size:20;
                 border:none;
@@ -103,6 +108,8 @@
             .submit:hover{
                 background-color:rgb(106, 224, 213);
             }
+            
+
             .gametab{
                 margin-top:20px;
                 border-radius:20px;
@@ -218,7 +225,8 @@
             </optgroup>
 
         </select>
-        <button onclick="update()" class="submit">Open Game</button>
+        <button onclick="update();" class="submit">Open Game</button>
+        <button onclick="openTab();" class="submit">Play the game in a new window</button>
         <br>
         <iframe src="about:blank" id="gameTab" class="gametab"></iframe>
         </div>
