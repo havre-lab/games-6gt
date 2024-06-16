@@ -12,7 +12,19 @@
             function update(){
                 document.getElementById("gameTab").src=document.getElementById("selection").value;
             }
-
+        </script>
+        <script>
+            let touchGrass=false;
+            function grass(){
+                if (!touchGrass){
+                    document.getElementById("gameTab").classList.add("grass");
+                    touchGrass=true;
+                }
+                else {
+                    document.getElementById("gameTab").classList.remove("grass");
+                    touchGrass=false;
+                };
+            };    
         
         </script>
         <script>
@@ -149,12 +161,20 @@
             
 
             .gametab{
+                position:relative;
+                left:0;
                 margin-top:20px;
                 border-radius:20px;
                 aspect-ratio:1366/568;
                 width:100%;
                 box-shadow:0 0 30px 10px grey;
+                transition:left 2s;
+                
 
+            }
+
+            .gametab.grass{
+                left:120%;
             }
             
         </style>
@@ -282,6 +302,7 @@
         </select>
         <button onclick="update();" class="submit">Open Game</button>
         <button onclick="openTab();" class="submit">Play the game in a new window</button>
+        <button onclick="grass();" class="submit">Go touch grass</button>
         <br>
         <iframe src="about:blank" id="gameTab" class="gametab"></iframe>
         </div>
